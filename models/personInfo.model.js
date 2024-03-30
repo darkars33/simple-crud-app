@@ -2,22 +2,38 @@ const mongoose = require("mongoose");
 
 const  PersonInfoSchema = new mongoose.Schema(
           {
-                    name:{
+                    companyName:{
                               type: String,
                               required: [true, "Name is required"]
                     },
-                    age:{
-                              type: Number,
-                              required: [true, "age is required"]
-                    },
-                    email:{
+                    position:{
                               type: String,
-                              required: [true, "email required"]
+                              required: [true, "position is required"]
                     },
-                    job:{
+                    role:{
+                              type: String,
+                              required: [true, "role required"]
+                    },
+                    postedAt:{
                               type: String,
                               required: false
-                    }
+                    },
+                    contract:{
+                              type: String,
+                              required: false
+                    },
+                    location:{
+                              type: String,
+                              required: false
+                    },
+                    languages:{
+                              type: Array,
+                              required: [true, "languages required"]
+                    },
+                    tools:{
+                              type: Array,
+                              required: false
+                    },
           },
           {
                     timestamps:true,
